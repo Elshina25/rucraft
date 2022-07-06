@@ -247,16 +247,17 @@ img {
   margin-bottom: 20px;
   border-bottom: 1px solid #e7e7e7;
   padding: 20px 0;
+  width: 100%;
 }
 .header_mobile .signs {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 
-.header_mobile .signs div:not(:first-child) {
+/* .header_mobile .signs div:not(:first-child) {
   margin-left: 50px;
-}
+} */
 
 .header_mobile .signs a {
   background-repeat: no-repeat;
@@ -554,6 +555,7 @@ img {
   left: 15px;
   background-image: url(../svg/Ellipse7.svg);
   background-repeat: no-repeat;
+  background-color: #0000;
 }
 
 .owl-carousel.owl-recently .owl-nav .owl-prev::after {
@@ -581,6 +583,7 @@ img {
   right: 15px;
   background-image: url(../svg/Ellipse8.svg);
   background-repeat: no-repeat;
+  background-color: #0000;
 }
 
 .owl-carousel.owl-recently .owl-nav .owl-next::after {
@@ -756,7 +759,8 @@ img {
   font-weight: 800;
   color: #BDBDBD;
   font-size: 16px;
-  line-height: 1.1;
+  line-height: 12px;
+  transition: all 0.5s;
 }
 
 .special_collection .menu_point a:hover {
@@ -764,7 +768,6 @@ img {
   border-bottom: 3px solid #F1641E;
   color: #F1641E;
   padding-bottom: 10px;
-  line-height: 1.1;
 }
 
 .special_collection .special_collection_item {
@@ -834,6 +837,7 @@ img {
   left: 15px;
   background-image: url(../svg/Ellipse7.svg);
   background-repeat: no-repeat;
+  background-color: #0000;
 }
 
 .owl-carousel.owl-items_set .owl-nav .owl-prev::after {
@@ -861,6 +865,7 @@ img {
   right: 15px;
   background-image: url(../svg/Ellipse8.svg);
   background-repeat: no-repeat;
+  background-color: #0000;
 }
 
 .owl-carousel.owl-items_set .owl-theme .owl-nav. .owl-next:hover {
@@ -912,6 +917,10 @@ img {
   text-align: center;
 }
 
+.items_set .items_set_block .gift_set:hover {
+  box-shadow: 0px 2px 7px rgb(0 0 0 / 36%);
+}
+
 .what_is_rucraft {
   background-color: rgba(71, 199, 229, 0.1);
   position: relative;
@@ -925,9 +934,6 @@ img {
   background-image: url('../svg/Subtract.svg');
   background-repeat: no-repeat;
   top: -30px;
-  right: 0;
-  bottom: 0;
-  left: 0;
   z-index: -1;
 
 
@@ -1000,6 +1006,12 @@ img {
   font-weight: 700;
   font-size: 16px;
   color: #47C7E5;
+  transition: all 0.5s;
+}
+
+.what_is_rucraft .to_about_us_link:hover {
+  background-color: #47C7E5;
+  color: #ffffff;
 }
 
 .email_form {
@@ -1021,7 +1033,7 @@ img {
   width: 430px;
   height: 260px;
   right: 44px;
-  top: -98px;
+  top: -60px;
 }
 
 
@@ -1036,13 +1048,14 @@ img {
   font-weight: 800;
   font-size: 22px;
   color: #FFFFFF;
+  margin-bottom: 20px;
 }
 
 .email_form .email_field {
   margin-right: 20px;
   flex: 0 0 50%;
   border-radius: 20px;
-  padding: 10px;
+  padding: 15px;
   border: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
@@ -1058,6 +1071,14 @@ img {
   background-color: #47C7E5;
   width: 195px;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.email_form .subscribe_button:hover {
+  background-color: #fff;
+}
+.email_form .subscribe_button:hover span{
+  color: #47C7E5;
 }
 
 .email_form .subscribe_button span {
@@ -1072,18 +1093,6 @@ img {
   position: relative;
 }
 
-
-.footer::after {
-  content: "";
-  position: absolute;
-  top: 250px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url(../svg/XMLID_16_little.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 
 .footer .first_part_footer {
   margin-bottom: 60px;
@@ -1170,6 +1179,18 @@ img {
   padding: 20px 0;
 }
 
+.footer .footer_low::after {
+  content: "";
+  position: absolute;
+  top: 380px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../svg/XMLID_16_little.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .footer .footer_low_links {
   display: flex;
 }
@@ -1196,6 +1217,11 @@ img {
   .header .header_container::before {
     display: none;
   }
+
+  .what_is_rucraft .email_form .container::before {
+    right: -48px;
+    top: -41px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1209,6 +1235,11 @@ img {
   .catalog_top .picture_block {
     margin-bottom: 10px;
   }
+
+  .what_is_rucraft .email_form {
+    padding-bottom: 200px;
+  }
+
 }
 
 @media (max-width: 991px) {
@@ -1299,21 +1330,36 @@ img {
     margin-bottom: -10px;
   }
 
+  .special_collection {
+    margin-bottom: 10px;
+  }
+
+  .special_collection .special_collection_item {
+    padding-bottom: 5px;
+  }
+
   .special_collection .mob_margin_block {
-    margin-right: -10px;
+    margin-right: -20px;
   }
 
   .special_collection .mob_marginbottom_block {
     margin-bottom: 10px;
+    margin-left: 5px;
+  }
+
+
+  .special_collection .mob_marginleft_block:nth-child(2n+2) {
+    margin-left: -15px;
   }
 
   
 
   .special_collection .first_item, .fourth_item, .fifth_item {
     margin-bottom: 10px;
+    
   }
 
-  .items_set .items_set_link {
+  .items_set .items_set_link a span {
     font-size: 0.9rem;
   }
 
@@ -1321,7 +1367,94 @@ img {
     font-size: 0.7rem;
     height: 35px;
   }
+
+  .what_is_rucraft .mob_col_about:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .what_is_rucraft .mob_col_about span {
+    font-size: 1rem;
+  }
+
+  .what_is_rucraft .mob_col_about .text_description {
+    font-size: 0.9rem;
+  }
+
+  .what_is_rucraft .to_about_us .to_about_us_link {
+    font-size: 0.9rem;
+  }
+
+  .what_is_rucraft .email_form .container::before {
+    width: 280px;
+    height: 160px;
+    background-size: contain;
+    right: 214px;
+    top: 160px;
+  }
+
+
+  .what_is_rucraft .email_form .form_description {
     
+    font-size: 1.1rem;
+  }
+
+  .what_is_rucraft .email_form .email_field {
+    flex: 3 0 50%;
+  }
+
+  .footer .container .footer_low {
+    flex-flow: column;
+  }
+
+  .footer .footer_low .copyright {
+    margin-bottom: 5px;
+  }
+
+  .footer .footer_low .footer_low_links {
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  .footer .footer_low_links li:not(:first-child) {
+    margin-left: 0;
+  }
+
+  .footer .footer_low .footer_low_links li {
+    margin-bottom: 5px;
+  }
+
+    
+}
+
+@media (max-width: 767px) {
+
+  .what_is_rucraft .email_form {
+    padding-bottom: 175px;
+  }
+  
+  .what_is_rucraft .email_form .container::before {
+      right: 125px;
+      top: 171px;
+      width: 280px;
+      height: 160px;
+      background-size: contain;
+  }
+
+  .special_collection::after {
+    display: none;
+  }
+
+  .footer .name_menu_block {
+    font-size: 1.1rem;
+  }
+
+  .footer .footer_menu_link {
+    font-size: 0.8rem;
+  }
+
+  .footer .footer_menu {
+    margin-bottom: 30px;
+  }
 }
 
 
@@ -1367,5 +1500,26 @@ img {
 
 }
 
+
+@media (max-width: 576px) {
+
+  .what_is_rucraft .email_form {
+    padding: 50px 20px 170px;
+  }
+
+  .what_is_rucraft .email_form .container::before {
+    top: 231px;
+    right: 50%;
+    transform: translate(50%, 10px);
+    width: 280px;
+    height: 160px;
+    background-size: contain;
+  }
+
+  .what_is_rucraft .email_form .subscribe_button {
+    margin-top: 20px;
+  }
+  
+}
 
 
